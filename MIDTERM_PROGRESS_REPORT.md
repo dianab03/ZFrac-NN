@@ -7,7 +7,7 @@
 
 When we look at natural objects like leaves, clouds, or cracks in materials, they often have a special property: they look similar at different zoom levels. This is called **fractal geometry**, and we can measure it using something called the **fractal dimension**.
 
-**The big question:** Do modern image recognition systems (CNNs) automatically learn to recognize these fractal patterns, or do we need to teach them explicitly?
+**The question is:** Do CNNs automatically learn to recognize these fractal patterns, or do we need to teach them explicitly?
 
 Our project tests this by:
 - Extracting fractal measurements from images ourselves
@@ -20,7 +20,7 @@ Our project tests this by:
 
 ### 2.1 Measuring Fractal Patterns (ZFrac)
 
-We divide each image into zones and measure how "complex" or "rough" each zone is. Think of it like this:
+We divide each image into zones and measure how "complex" or "rough" each zone is:
 
 - A smooth surface has low complexity (like a wall)
 - A rough surface has high complexity (like tree bark)
@@ -62,7 +62,7 @@ If these scores are low, it means the neural network is NOT learning fractal pat
 
 ### 3.1 Datasets We're Using
 
-We picked three datasets where texture and structure matter:
+For now we've picked three datasets where texture and structure matter:
 
 | Dataset | What It Is | Why We Chose It |
 |---------|-----------|-----------------|
@@ -72,7 +72,7 @@ We picked three datasets where texture and structure matter:
 
 ### 3.2 How We Train
 
-- Train for up to 200 rounds, but stop early if not improving
+- Like in the paper referenced, we train for up to 200 epochs, but stop early if not improving
 - Use 70% of images for training, 15% for validation, 15% for testing
 - Save all results so we don't have to retrain every time
 
@@ -82,13 +82,12 @@ We picked three datasets where texture and structure matter:
 
 ### 4.1 Completed Tasks
 
-- Code to extract fractal features 
-- Code to measure similarity (CKA, SVCCA) 
+- Extracting fractal features 
+- Measure similarity (CKA, SVCCA) 
 - Simple network for fractal features 
 - Deep network baseline (ResNet18) 
-- Loading all three datasets 
+- Loading three datasets 
 - Training and saving models 
-- Full experiments on all datasets ✅
 
 ### 4.2 Classification Results
 
@@ -99,9 +98,9 @@ We picked three datasets where texture and structure matter:
 | Magnetic Tile Defect | 72.91% | 97.54% | 2.8s | 366.2s | **129× faster** |
 
 **Key observations:**
-- ZFrac trains **100-150× faster** than CNNs across all datasets
-- On the defect detection dataset (KolektorSDD), ZFrac achieved **90.16% accuracy** - very competitive with much less compute
-- CNN still wins on raw accuracy, but at a massive computational cost
+- ZFrac trains **100x faster** than CNNs across all datasets
+- On the defect detection dataset (KolektorSDD), ZFrac achieved **90.16% accuracy** which is very competitive with much less compute
+- CNN still wins on raw accuracy, but at greater computational cost
 
 ### 4.3 Similarity Analysis (Do CNNs Learn Fractals?)
 
@@ -121,23 +120,24 @@ We picked three datasets where texture and structure matter:
 ## 5. What's Left To Do
 
 ### Next Steps
-1. Create charts and visualizations of results
-2. Deeper analysis of when fractal features work best
-3. Explore combining ZFrac + CNN features for potential improvements
+1. Experiment with more datasets and possibly more CNN architectures
+2. Create charts and visualizations of results
+3. Analysis on when fractal features work best
+4. Explore combining ZFrac + CNN features for potential improvements
 
 ---
 
 ## 6. Key Findings
 
-Based on our completed experiments:
+Based on our experiments so far:
 
 1. **CNNs don't learn fractal patterns** - Low CKA scores (0.17-0.30) confirm that CNNs learn different features than fractal geometry
 
 2. **Fractal features excel at defect detection** - On KolektorSDD, ZFrac achieved 90% accuracy, showing fractal patterns are highly relevant for surface defect detection
 
-3. **Massive time savings** - ZFrac trains **100-150× faster** than CNNs with ~1000× fewer parameters
+3. **Massive time savings** - ZFrac trains faster than CNNs with ~1000× fewer parameters
 
-4. **Trade-off exists** - CNNs achieve higher accuracy, but at significant computational cost. For resource-limited scenarios, ZFrac is a viable alternative
+4. **Trade-off exists** - CNNs achieve higher accuracy. For resource-limited scenarios, ZFrac is a viable alternative
 
 ---
 
