@@ -1,0 +1,55 @@
+{
+  "settings": {
+    "epochs": 200,
+    "patience": 10,
+    "lr": 0.001,
+    "batch_size": 32
+  },
+  "results": {
+    "tomato": {
+      "name": "Tomato Leaf Disease",
+      "zfrac": {
+        "test_acc": 43.388429752066116,
+        "train_time": 7.922150373458862,
+        "params": 11722
+      },
+      "cnn": {
+        "test_acc": 80.16528925619835,
+        "train_time": 1197.0618133544922,
+        "params": 11181642
+      },
+      "cka_mean": 0.28415238857269287,
+      "svcca_mean": 0.9434307616995568
+    },
+    "kolektor": {
+      "name": "KolektorSDD",
+      "zfrac": {
+        "test_acc": 90.1639344262295,
+        "train_time": 1.0982093811035156,
+        "params": 11202
+      },
+      "cnn": {
+        "test_acc": 98.36065573770492,
+        "train_time": 106.08712434768677,
+        "params": 11177538
+      },
+      "cka_mean": 0.3031051456928253,
+      "svcca_mean": 0.8950381117472079
+    },
+    "magnetic": {
+      "name": "Magnetic Tile Defect",
+      "zfrac": {
+        "test_acc": 72.9064039408867,
+        "train_time": 2.838671922683716,
+        "params": 11462
+      },
+      "cnn": {
+        "test_acc": 97.53694581280789,
+        "train_time": 366.1751072406769,
+        "params": 11179590
+      },
+      "cka_mean": 0.17003843188285828,
+      "svcca_mean": 0.9390473754968433
+    }
+  }
+}
