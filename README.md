@@ -24,7 +24,7 @@ This will:
 
 - `fractal_features.py` - ZFrac extraction using box counting
 - `models.py` - ZFracNN and CNN models
-- `datasets.py` - Tomato dataset loader
+- `datasets.py` - dataset loader
 - `train.py` - training functions
 - `cca_cka_analysis.py` - CCA/CKA similarity analysis
 - `run_experiment.py` - main script
