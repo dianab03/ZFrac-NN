@@ -2,8 +2,6 @@
 
 Replication of "On The Potential of The Fractal Geometry and The CNNs' Ability to Encode it"
 
-Uses the Tomato Leaf Disease Dataset.
-
 ## Setup
 
 ```bash
