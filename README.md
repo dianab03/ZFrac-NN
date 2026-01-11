@@ -16,7 +16,7 @@ python run_experiment.py
 
 This will:
 1. Train ZFrac + shallow NN
-2. Train ResNet18 CNN
+2. Train CNNs
 3. Run CCA/CKA analysis to compare CNN features vs fractal features
 4. Print comparison results
 

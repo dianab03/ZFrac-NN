@@ -14,9 +14,21 @@
         "params": 11722
       },
       "cnn": {
-        "test_acc": 80.16528925619835,
-        "train_time": 1197.0618133544922,
-        "params": 11181642
+        "resnet18": {
+          "test_acc": 80.16528925619835,
+          "train_time": 1197.0618133544922,
+          "params": 11181642
+        },
+        "vgg16": {
+          "test_acc": 66.94214876033058,
+          "train_time": 5751.404340982437,
+          "params": 134301514
+        },
+        "densenet121": {
+          "test_acc": 81.81818181818181,
+          "train_time": 1635.1543605327606,
+          "params": 6964106
+        }
       },
       "cka_mean": 0.28415238857269287,
       "svcca_mean": 0.9434307616995568
@@ -29,9 +41,21 @@
         "params": 11202
       },
       "cnn": {
-        "test_acc": 98.36065573770492,
-        "train_time": 106.08712434768677,
-        "params": 11177538
+        "resnet18": {
+          "test_acc": 98.36065573770492,
+          "train_time": 106.08712434768677,
+          "params": 11177538
+        },
+        "vgg16": {
+          "test_acc": 90.1639344262295,
+          "train_time": 508.2565076351166,
+          "params": 134268738
+        },
+        "densenet121": {
+          "test_acc": 98.36065573770492,
+          "train_time": 170.58220219612122,
+          "params": 6955906
+        }
       },
       "cka_mean": 0.3031051456928253,
       "svcca_mean": 0.8950381117472079
@@ -44,12 +68,78 @@
         "params": 11462
       },
       "cnn": {
-        "test_acc": 97.53694581280789,
-        "train_time": 366.1751072406769,
-        "params": 11179590
+        "resnet18": {
+          "test_acc": 97.53694581280789,
+          "train_time": 366.1751072406769,
+          "params": 11179590
+        },
+        "vgg16": {
+          "test_acc": 72.9064039408867,
+          "train_time": 2825.6349885463715,
+          "params": 134285126
+        },
+        "densenet121": {
+          "test_acc": 99.01477832512315,
+          "train_time": 1291.943382024765,
+          "params": 6960006
+        }
       },
       "cka_mean": 0.17003843188285828,
       "svcca_mean": 0.9390473754968433
+    },
+    "surface_cracks": {
+      "name": "Surface Cracks",
+      "zfrac": {
+        "test_acc": 85.8,
+        "train_time": 24.49993324279785,
+        "params": 11202
+      },
+      "cnn": {
+        "resnet18": {
+          "test_acc": 99.53333333333333,
+          "train_time": 718.3947536945343,
+          "params": 11177538
+        },
+        "vgg16": {
+          "test_acc": 99.06666666666666,
+          "train_time": 7854.709645748138,
+          "params": 134268738
+        },
+        "densenet121": {
+          "test_acc": 99.6,
+          "train_time": 4506.580105543137,
+          "params": 6955906
+        }
+      },
+      "cka_mean": 0.05931133031845093,
+      "svcca_mean": 0.789513156269724
+    },
+    "neu_metal": {
+      "name": "NEU Metal Surface Defects",
+      "zfrac": {
+        "test_acc": 59.72222222222222,
+        "train_time": 4.596947431564331,
+        "params": 11462
+      },
+      "cnn": {
+        "resnet18": {
+          "test_acc": 100.0,
+          "train_time": 260.4381444454193,
+          "params": 11179590
+        },
+        "vgg16": {
+          "test_acc": 94.44444444444444,
+          "train_time": 8660.922055482864,
+          "params": 134285126
+        },
+        "densenet121": {
+          "test_acc": 100.0,
+          "train_time": 1347.087516784668,
+          "params": 6960006
+        }
+      },
+      "cka_mean": 0.4053451120853424,
+      "svcca_mean": 0.9339447243902441
     }
   }
 }
